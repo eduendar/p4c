@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Archive
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h1>Archive</h1>
+    <ion-list>
+        <button ion-item *ngFor="let item of tests" (click)="start(item.id)">
+            Test {{ item.id }}
+        </button>
+    </ion-list>
+</ion-content>

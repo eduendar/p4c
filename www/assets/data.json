@@ -1,0 +1,66 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "text": "Which type of chart can be used to display summary values from two different levels of grouping in a report?(Choose 2)",
+      "type": 1,
+      "opportunity": 2
+    },
+    {
+      "id": 2,
+      "text": "Which accounts are automatically synchronized on Salesforce Classic Lite?",
+      "type": 1,
+      "opportunity": 2
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "question_id": 1,
+      "text": "Donut chart",
+      "right": false
+    },
+    {
+      "id": 2,
+      "question_id": 1,
+      "text": "Stacked bar chart",
+      "right": true
+    },
+    {
+      "id": 3,
+      "question_id": 1,
+      "text": "Funnel chart",
+      "right": false
+    },
+    {
+      "id": 4,
+      "question_id": 1,
+      "text": "Grouped line chart",
+      "right": true
+    },
+    {
+      "id": 1,
+      "question_id": 2,
+      "text": "Antwort 1",
+      "right": true
+    },
+    {
+      "id": 2,
+      "question_id": 2,
+      "text": "Antwort 2",
+      "right": false
+    },
+    {
+      "id": 3,
+      "question_id": 2,
+      "text": "Antwort 3",
+      "right": false
+    },
+    {
+      "id": 4,
+      "question_id": 2,
+      "text": "Antwort 4",
+      "right": true
+    }
+  ]
+}

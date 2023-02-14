@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Result</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+
+    <p>You answered {{right}} of {{total}} questions correctly!</p>
+    <h2>Your score</h2>
+    <h1>{{percentage | number : '1.2-2'}} %</h1>
+
+    <h1>Wrong questions</h1>
+
+    <ion-card *ngFor="let q of wrong_questions">
+
+        <ion-card-header>
+            <h2 class="item-text-wrap">{{ q.text }}</h2>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-list *ngFor="let answer of q.answers">
+                <ion-item
+                      [color]="checkResponse(answer,q.id)">
+                    <ion-label class="item-text-wrap">{{answer.text}} <ion-icon color="secondary" *ngIf="answer.right==1" name="checkmark"></ion-icon></ion-label>
+
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+
+    </ion-card>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title>
+            Exercise
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-toolbar>
+        <ion-buttons start *ngIf="current > 1">
+            <button ion-button (click)="previous()" icon-only>
+                <ion-icon name="arrow-back"></ion-icon> Previous
+            </button>
+        </ion-buttons>
+        <ion-title>Question {{current}}/{{max}}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="saveQuestion()">
+                Next  <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-card *ngIf="currentQuestion">
+
+        <ion-card-header>
+            <h2 class="item-text-wrap">{{ currentQuestion.text }}</h2>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-item *ngFor="let answer of currentQuestion.answers"
+                      [color]="checkResponse(answer.right,userResponse[answer.id])">
+                <ion-label class="item-text-wrap">{{answer.text}}</ion-label>
+                <ion-checkbox [(ngModel)]="userResponse[answer.id]"
+                ></ion-checkbox>
+            </ion-item>
+        </ion-card-content>
+
+    </ion-card>
+
+    <ion-row padding>
+        <button *ngIf="mode==2" ion-button block (click)="checkQuestion()">Check</button>
+    </ion-row>
+
+</ion-content>
